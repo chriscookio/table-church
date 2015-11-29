@@ -1,4 +1,4 @@
-/*
+        /*
 Theme Name: The Table Church DC
 Theme URI: http://thetablechurchdc.org/
 Author: Chris Cook
@@ -48,7 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: "bebasneue", sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -167,7 +167,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace;
+	font-family: "bebasneue", monospace, monospace;
 	font-size: 1em;
 }
 
@@ -266,13 +266,17 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+@font-face {
+    font-family: bebasneue;
+    src: url('font/BebasNeue Regular.ttf');
+}
 body,
 button,
 input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "bebasneue", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -308,7 +312,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-family: "bebasneue", sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -322,7 +326,7 @@ code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: "bebasneue", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -720,6 +724,27 @@ a:active {
 	clear: both;
 }
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-branding {
+    background: #231F20;
+/*    padding: ;
+    text-align: ;*/
+    
+.site-title {
+/*    font-weight: 700;
+    font-size: 40px;
+    text-transform: 4.5rem;
+    line-height: normal;
+    padding-bottom: 1rem;*/
+}
+
+.site-description {
+/*    font-weight: 100;
+    font-size: 20px;*/
+}
+}
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
