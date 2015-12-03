@@ -48,7 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: "bebasneue", sans-serif;
+            font-family: "bebasneue", sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -266,10 +266,10 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@font-face {
+/*@font-face {
     font-family: bebasneue;
     src: url('font/BebasNeue Regular.ttf');
-}
+}*/
 body,
 button,
 input,
