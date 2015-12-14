@@ -45,8 +45,7 @@ function table_theme_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'table-theme' ),
-	) );
-
+	) );        
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -79,6 +78,36 @@ function table_theme_setup() {
 }
 endif; // table_theme_setup
 add_action( 'after_setup_theme', 'table_theme_setup' );
+
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'sermon',
+    array(
+      'labels' => array(
+        'name' => __( 'Sermons' ),
+        'singular_name' => __( 'Sermon' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'sermons'),
+    )
+  );
+    register_post_type( 'event',
+    array(
+      'labels' => array(
+        'name' => __( 'Events' ),
+        'singular_name' => __( 'Event' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'events'),
+    )
+  );
+}
+// do i need these??????????????????
+//register_taxonomy( 'sermons', $object_type, $args );
+//register_taxonomy( 'events', $object_type, $args );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

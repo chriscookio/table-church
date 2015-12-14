@@ -1,4 +1,4 @@
-        /*
+/*
 Theme Name: The Table Church DC
 Theme URI: http://thetablechurchdc.org/
 Author: Chris Cook
@@ -48,9 +48,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-            font-family: "bebasneue", sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+        font-family: "bebasneue", sans-serif;
+        font-size: 1.25em;
+/*	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;*/
 }
 
 body {
@@ -266,10 +267,10 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-/*@font-face {
+@font-face {
     font-family: bebasneue;
     src: url('font/BebasNeue Regular.ttf');
-}*/
+}
 body,
 button,
 input,
@@ -419,6 +420,26 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+.sermonthumb
+{
+/*    height: 300px;
+    width: 300px;*/
+    background-size: 300px;
+    /*padding: 10px;*/
+    text-align: center;
+}
+
+.sermonthumbtxt
+{
+    z-index:100;
+    left: 0;
+    position:absolute;    
+    color:white;
+    font-size:60px;
+    font-weight:bold;
+    left:50%;
+    top:50%;
+}
 
 /*--------------------------------------------------------------
 # Forms
@@ -530,6 +551,7 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+        background-color: #F5FE03;
 }
 
 .main-navigation ul {
@@ -733,16 +755,16 @@ a:active {
     text-align: ;*/
     
 .site-title {
-/*    font-weight: 700;
+    font-weight: 700;
     font-size: 40px;
     text-transform: 4.5rem;
     line-height: normal;
-    padding-bottom: 1rem;*/
+    padding-bottom: 1rem;
 }
 
 .site-description {
-/*    font-weight: 100;
-    font-size: 20px;*/
+    font-weight: 100;
+    font-size: 20px;
 }
 }
 /*--------------------------------------------------------------
@@ -786,6 +808,31 @@ a:active {
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+.page-content {
+    min-height: 1000px;
+}
+.s1 {
+    background: blue;
+}
+.s2 {
+    background: red;
+}
+.s3 {
+    background: green;
+}
+.s4 {
+    background: orange;
+}
+.s5 {
+    background: brown;
+}
+.s6 {
+    background: purple;
+}
+.s7 {
+    background: yellow;
+}
+
 
 .page-links {
 	clear: both;
