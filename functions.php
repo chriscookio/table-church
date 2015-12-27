@@ -40,7 +40,7 @@ function table_theme_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails', array( 'post', 'sermon' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -79,34 +79,57 @@ function table_theme_setup() {
 endif; // table_theme_setup
 add_action( 'after_setup_theme', 'table_theme_setup' );
 
-
-add_action( 'init', 'create_post_type' );
+/*
+ * 
+ * Creates both custom post types: Sermons and Events.
+ * Defines upload/creation options and labels. * 
+ * 
+ */
 function create_post_type() {
-  register_post_type( 'sermon',
-    array(
-      'labels' => array(
-        'name' => __( 'Sermons' ),
-        'singular_name' => __( 'Sermon' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'rewrite' => array('slug' => 'sermons'),
-    )
+    
+  $sermon_labels = array(
+    'name' => __( 'Sermons' ),
+    'singular_name' => __( 'Sermon' ),
+    'add_new_item' => __( 'Upload New Sermon' )
   );
-    register_post_type( 'event',
-    array(
-      'labels' => array(
-        'name' => __( 'Events' ),
-        'singular_name' => __( 'Event' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'rewrite' => array('slug' => 'events'),
-    )
+    
+  $sermon_args = array(
+    'labels' => $sermon_labels,
+    'public' => true,
+    'has_archive' => true,
+    'rewrite' => array('slug' => 'sermons'),
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-format-audio',
+    'supports' => [ 'title', 'editor', 'thumbnail', ]
   );
+
+  register_post_type( 'sermon', $sermon_args );
+  
+  set_post_format( 'sermon' , 'audio' );
+
+  $event_labels = array(
+    'name' => __( 'Events' ),
+    'singular_name' => __( 'Event' ),
+    'add_new_item' => __( 'Add New Event' )
+  );
+  
+  $event_args = array(
+    'labels' => $event_labels,
+    'public' => true,
+    'has_archive' => true,
+    'rewrite' => array('slug' => 'events'),
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-location-alt',
+    'supports' => [ 'title', 'editor', 'thumbnail', ]
+  );
+  
+    register_post_type( 'event', $event_args );
 }
-// do i need these??????????????????
-//register_taxonomy( 'sermons', $object_type, $args );
+add_action( 'init', 'create_post_type' );
+
+// do we need to register taxonomies?
+//register_taxonomy( 'sermon', $object_type, $args );
+//register_taxonomy_for_object_type( 'sermon', 'sermon' );
 //register_taxonomy( 'events', $object_type, $args );
 
 /**
