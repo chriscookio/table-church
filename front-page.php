@@ -14,87 +14,45 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <div class="s1" class="page-content">
-
-                <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) {
-                            the_post(); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
-                            <?php }
-                    }
-                ?>
+            <div class="fp_div">
+                <h1>AUTHENTIC. THOUGHTFUL. ENGAGED.</h1>
+                <span class="dashicons dashicons-twitter"></span>
+                <span class="dashicons dashicons-facebook-alt"></span>
+                <span class="dashicons dashicons-googleplus"></span>
+            </div>
+            <div class="fp_div" id='about'>
+                <H1>WHO WE ARE</H1>
+            </div>
+            <div class="fp_div">
+                <H1>H STREET / COLUMBIA HEIGHTS </H1>
+            </div>
+            <div class="fp_div">
+                <H1>PILLARS</H1>
+            </div>
+            <div class="fp_div">
+                <h1>TEACHING</h1>
                 <div class="container">
-                    <?php $postslist = get_posts('numberposts=4&order=DESC&orderby=date');
+                    <?php 
+                    $args = [
+                        'posts_per_page'   => 4,
+                        'post_type'        => 'sermon',
+                        'orderby'          => 'date',
+                        'order'            => 'DESC',
+                    ];
+                    $postslist = get_posts(/*'numberposts=4&order=DESC&orderby=date'*/ $args );
                     foreach ($postslist as $post) :
                         setup_postdata($post); ?>   
-                    <div class=col-md-3 class="sermonthumb" style="background-image: url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id() ) [0]; ?>'); background-repeat: no-repeat;">
-                    <?php echo the_date(); ?>
+                    <div class=col-md-3 style="background-image: url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id() ) [0]; ?>'); class="sermonthumb"">
+                        <h2> <?php echo the_date(); ?> </h2>
                     </div>
                     <?php endforeach;?>
                 </div>
             </div>
-            
-            <div class="s2">
-
-                <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) {
-                            the_post(); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
-                            <?php }
-                    }
-                ?>
+            <div class="fp_div">
+                <H1>WANT TO GIVE?</H1>
             </div>
-            <div class="s3">
-
-                <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) {
-                            the_post(); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
-                            <?php }
-                    }
-                ?>
-            </div>
-            <div class="s4">
-
-                <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) {
-                            the_post(); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
-                            <?php }
-                    }
-                ?>
-            </div>
-            <div class="s5">
-
-                <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) {
-                            the_post(); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
-                            <?php }
-                    }
-                ?>
-            </div>
-            <div class="s6">
-
-                <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) {
-                            the_post(); ?>
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
-                            <?php }
-                    }
-                ?>
+            <div class="fp_div">
+                <H1>KIDS & STUDENTS</h1>
             </div>
 
                 <?php while ( have_posts() ) : the_post(); ?>

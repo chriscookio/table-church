@@ -422,11 +422,8 @@ table {
 }
 .sermonthumb
 {
-/*    height: 300px;
-    width: 300px;*/
-    background-size: 300px;
-    /*padding: 10px;*/
-    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .sermonthumbtxt
@@ -550,6 +547,7 @@ a:active {
 	clear: both;
 	display: block;
 	float: left;
+        position: fixed;
 	width: 100%;
         background-color: #F5FE03;
 }
@@ -811,25 +809,29 @@ a:active {
 .page-content {
     min-height: 1000px;
 }
-.s1 {
+
+.fp_div {
+    min-height:300px;
+}
+#banner {
     background: blue;
 }
-.s2 {
+#about {
     background: red;
 }
-.s3 {
+#locations {
     background: green;
 }
-.s4 {
+#pillars {
     background: orange;
 }
-.s5 {
+#teaching {
     background: brown;
 }
-.s6 {
+#giving {
     background: purple;
 }
-.s7 {
+#kids {
     background: yellow;
 }
 

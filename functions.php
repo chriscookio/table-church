@@ -88,39 +88,39 @@ add_action( 'after_setup_theme', 'table_theme_setup' );
 function create_post_type() {
     
   $sermon_labels = array(
-    'name' => __( 'Sermons' ),
+    'name'          => __( 'Sermons' ),
     'singular_name' => __( 'Sermon' ),
-    'add_new_item' => __( 'Upload New Sermon' )
+    'add_new_item'  => __( 'Upload New Sermon' )
   );
     
   $sermon_args = array(
-    'labels' => $sermon_labels,
-    'public' => true,
-    'has_archive' => true,
-    'rewrite' => array('slug' => 'sermons'),
+    'labels'        => $sermon_labels,
+    'public'        => true,
+    'has_archive'   => true,
+    'rewrite'       => array('slug' => 'sermons'),
     'menu_position' => 5,
-    'menu_icon' => 'dashicons-format-audio',
-    'supports' => [ 'title', 'editor', 'thumbnail', ]
+    'menu_icon'     => 'dashicons-format-audio',
+    'supports'      => [ 'title', 'editor', 'thumbnail', ]
   );
 
   register_post_type( 'sermon', $sermon_args );
-  
+    
   set_post_format( 'sermon' , 'audio' );
 
   $event_labels = array(
-    'name' => __( 'Events' ),
+    'name'          => __( 'Events' ),
     'singular_name' => __( 'Event' ),
-    'add_new_item' => __( 'Add New Event' )
+    'add_new_item'  => __( 'Add New Event' )
   );
   
   $event_args = array(
-    'labels' => $event_labels,
-    'public' => true,
-    'has_archive' => true,
-    'rewrite' => array('slug' => 'events'),
+    'labels'        => $event_labels,
+    'public'        => true,
+    'has_archive'   => true,
+    'rewrite'       => array('slug' => 'events'),
     'menu_position' => 5,
-    'menu_icon' => 'dashicons-location-alt',
-    'supports' => [ 'title', 'editor', 'thumbnail', ]
+    'menu_icon'     => 'dashicons-location-alt',
+    'supports'      => [ 'title', 'editor', 'thumbnail', ]
   );
   
     register_post_type( 'event', $event_args );
