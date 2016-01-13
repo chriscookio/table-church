@@ -438,6 +438,23 @@ table {
     top:50%;
 }
 
+.parish_text
+{
+    text-align: center;
+    padding: 0 10%
+}
+
+.engaging_block
+{
+    height: 50%;
+}
+.shaded_box
+{
+    background-color: black;
+    opacity: 0.4;
+    width: 80%;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -545,10 +562,10 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
+	/*display: block;*/
+	/*float: left;*/
         position: fixed;
-	width: 100%;
+	/*width: 100%;*/
         background-color: #F5FE03;
 }
 
@@ -749,22 +766,27 @@ a:active {
 --------------------------------------------------------------*/
 .site-branding {
     background: #231F20;
-/*    padding: ;
-    text-align: ;*/
-    
+    float: left;
+    postion: fixed;
+}
+
 .site-title {
-    font-weight: 700;
+    font-weight: 700;       /* bold */
     font-size: 40px;
     text-transform: 4.5rem;
     line-height: normal;
     padding-bottom: 1rem;
 }
 
-.site-description {
+.site-contact {
     font-weight: 100;
     font-size: 20px;
+    text-align: right;
+    color: black;
+    text-transform: uppercase;
+    float: left;       
 }
-}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -819,11 +841,12 @@ a:active {
 #about {
     background: red;
 }
-#locations {
+#parishes {
     background: green;
 }
-#pillars {
-    background: orange;
+#engaging {
+    /*background: lightblue;*/
+    /*height: 1000px;*/
 }
 #teaching {
     background: brown;

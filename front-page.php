@@ -23,13 +23,45 @@ get_header(); ?>
             <div class="fp_div" id='about'>
                 <H1>WHO WE ARE</H1>
             </div>
-            <div class="fp_div">
-                <H1>H STREET / COLUMBIA HEIGHTS </H1>
+            <div class="fp_div" id="parishes">
+                <div class="col-md-6">
+                    <a href="http://localhost/TableChurch/hstreet/"><h2 class="parish_text">H STREET</h2></a>
+                    <p class ="parish_text">
+                        <?php echo $lorem; ?>
+                    </p>
+                    <a href="http://localhost/TableChurch/hstreet/"><h3 class="parish_text">READ MORE</h3></a>
+                </div>
+                <div class="col-md-6">
+                    <a href="http://localhost/TableChurch/cohi/"><h2 class="parish_text">COLUMBIA HEIGHTS</h2></a>
+                    <p class ="parish_text">
+                        <?php echo $lorem; ?>
+                    </p>
+                    <a href="http://localhost/TableChurch/hstreet/"><h3 class="parish_text">READ MORE</h3></a>
+                </div>
             </div>
-            <div class="fp_div">
-                <H1>PILLARS</H1>
+            <div class="fp_div" id="engaging">
+                <div class="col-md-6" class="engaging_block">
+                    <div class="shaded_box">
+                        <a href="localhost/TableChurch/SERVING"><h1>SERVING</h1></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <a href="localhost/TableChurch/GROWING"><h1>GROWING</h1></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <a href="localhost/TableChurch/COMMUNITY"><h1>COMMUNITY</h1></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <a href="localhost/TableChurch/JUSTICE"><h1>JUSTICE</h1></a>
+                    </div>
+                </div>
             </div>
-            <div class="fp_div">
+            <div class="fp_div" id="teaching">
                 <h1>TEACHING</h1>
                 <div class="container">
                     <?php 
@@ -42,16 +74,16 @@ get_header(); ?>
                     $postslist = get_posts(/*'numberposts=4&order=DESC&orderby=date'*/ $args );
                     foreach ($postslist as $post) :
                         setup_postdata($post); ?>   
-                    <div class=col-md-3 style="background-image: url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id() ) [0]; ?>'); class="sermonthumb"">
+                    <div class="col-md-3" style="background-image: url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id() ) [0]; ?>');" class="sermonthumb">
                         <h2> <?php echo the_date(); ?> </h2>
                     </div>
                     <?php endforeach;?>
                 </div>
             </div>
-            <div class="fp_div">
+            <div class="fp_div" id="giving">
                 <H1>WANT TO GIVE?</H1>
             </div>
-            <div class="fp_div">
+            <div class="fp_div" id="kids">
                 <H1>KIDS & STUDENTS</h1>
             </div>
 

@@ -7,6 +7,8 @@
  * @package Table_Theme
  */
 
+$lorem = "Hello, little man. I will destroy you! You are the last hope of the universe. It's a T. It goes 'tuh'. Then we'll go with that data file! We're also Santa Claus!";
+
 if ( ! function_exists( 'table_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
