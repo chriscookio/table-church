@@ -9,6 +9,13 @@
 
 $lorem = "Hello, little man. I will destroy you! You are the last hope of the universe. It's a T. It goes 'tuh'. Then we'll go with that data file! We're also Santa Claus!";
 
+$lorem_long = "WINDMILLS DO NOT WORK THAT WAY! GOOD NIGHT! Hey, what kinda party is this? There's no booze and only one hooker. Stop! Don't shoot fire stick in space canoe! Cause explosive decompression! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!
+Moving along… No! Don't jump! We're also Santa Claus! I'm just glad my fat, ugly mama isn't alive to see this day. Soothe us with sweet lies.
+Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough to feel ways about stuff! It's okay, Bender. I like cooking too. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages!";
+
+$lorem_short = "Can I use the gun? Bender, hurry! This fuel's expensive!";
+
+
 if ( ! function_exists( 'table_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

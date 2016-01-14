@@ -1,3 +1,5 @@
+<?php header ("Content-type: text/css");?>
+
 /*
 Theme Name: The Table Church DC
 Theme URI: http://thetablechurchdc.org/
@@ -50,8 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 html {
         font-family: "bebasneue", sans-serif;
         font-size: 1.25em;
-/*	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;*/
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
 }
 
 body {
@@ -447,12 +449,15 @@ table {
 .engaging_block
 {
     height: 50%;
+    text-align: center;
 }
+
 .shaded_box
 {
     background-color: black;
-    opacity: 0.4;
-    width: 80%;
+    opacity: 0.25;
+    /*margin: 0 0px 0 200px;*/
+    display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -562,9 +567,10 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	/*display: block;*/
+	/*display: block; (this was the default)*/
+	display: inline;
 	/*float: left;*/
-        position: fixed;
+        /*position: fixed;*/
 	/*width: 100%;*/
         background-color: #F5FE03;
 }
@@ -833,26 +839,29 @@ a:active {
 }
 
 .fp_div {
-    min-height:300px;
+    display: inline-block;
+    width: 100%;
+}
+#splash {
+    background: lightblue;
 }
 #banner {
-    background: blue;
+    background: lightgreen;
 }
 #about {
-    background: red;
+    background: pink;
 }
 #parishes {
-    background: green;
+    background: lightgreen;
 }
 #engaging {
-    /*background: lightblue;*/
-    /*height: 1000px;*/
+    background: #44bb44;
 }
 #teaching {
-    background: brown;
+    background: #bb4444;
 }
 #giving {
-    background: purple;
+    background: #4444bb;
 }
 #kids {
     background: yellow;

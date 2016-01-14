@@ -14,14 +14,16 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <div class="fp_div">
-                <h1>AUTHENTIC. THOUGHTFUL. ENGAGED.</h1>
+            <div class="fp_div" id="splash">
+                <h1 class="aligncenter">AUTHENTIC. THOUGHTFUL. ENGAGED.</h1>
                 <span class="dashicons dashicons-twitter"></span>
                 <span class="dashicons dashicons-facebook-alt"></span>
                 <span class="dashicons dashicons-googleplus"></span>
             </div>
             <div class="fp_div" id='about'>
                 <H1>WHO WE ARE</H1>
+                <div class="col-md-4"></div>
+                <p class="col-md-8"><?php echo $lorem_long; ?></p>
             </div>
             <div class="fp_div" id="parishes">
                 <div class="col-md-6">
@@ -43,21 +45,29 @@ get_header(); ?>
                 <div class="col-md-6" class="engaging_block">
                     <div class="shaded_box">
                         <a href="localhost/TableChurch/SERVING"><h1>SERVING</h1></a>
+                        <p><?php echo $lorem_short; ?></p>
+                        <a href="localhost/TableChurch/serving"><h3 class="parish_text">READ MORE</h3></a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div>
+                    <div class="shaded_box">
                         <a href="localhost/TableChurch/GROWING"><h1>GROWING</h1></a>
+                        <p><?php echo $lorem_short; ?></p>
+                        <a href="localhost/TableChurch/GROWING"><h3 class="parish_text">READ MORE</h3></a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div>
+                    <div class="shaded_box">
                         <a href="localhost/TableChurch/COMMUNITY"><h1>COMMUNITY</h1></a>
+                        <p><?php echo $lorem_short; ?></p>
+                        <a href="localhost/TableChurch/community"><h3 class="parish_text">READ MORE</h3></a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div>
+                    <div class="shaded_box">
                         <a href="localhost/TableChurch/JUSTICE"><h1>JUSTICE</h1></a>
+                        <p><?php echo $lorem_short; ?></p>
+                        <a href="localhost/TableChurch/justice"><h3 class="parish_text">READ MORE</h3></a>
                     </div>
                 </div>
             </div>
@@ -66,7 +76,7 @@ get_header(); ?>
                 <div class="container">
                     <?php 
                     $args = [
-                        'posts_per_page'   => 4,
+                        'posts_per_page'   => '4',
                         'post_type'        => 'sermon',
                         'orderby'          => 'date',
                         'order'            => 'DESC',
