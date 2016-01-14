@@ -1,5 +1,3 @@
-<?php header ("Content-type: text/css");?>
-
 /*
 Theme Name: The Table Church DC
 Theme URI: http://thetablechurchdc.org/
@@ -21,6 +19,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+
+/* WP needs style.css to pick up info in the above comment (specific format)
+actual style: style.php included as stylesheet via theme.php line 223
+*/  
+
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -422,22 +425,20 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-.sermonthumb
+.sermon_thumb
 {
-    background-position: center center;
-    background-repeat: no-repeat;
+    postion: relative;
 }
 
-.sermonthumbtxt
+.sermon_date
 {
-    z-index:100;
-    left: 0;
+    <!--left: 0;-->
     position:absolute;    
     color:white;
     font-size:60px;
     font-weight:bold;
-    left:50%;
-    top:50%;
+    <!--left:50%;-->
+    <!--top:50%;-->
 }
 
 .parish_text
@@ -567,9 +568,7 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	/*display: block; (this was the default)*/
-	display: inline;
-	/*float: left;*/
+	/*display: block;*/
         /*position: fixed;*/
 	/*width: 100%;*/
         background-color: #F5FE03;
@@ -640,6 +639,11 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
+}
+
+.menu-item{
+    padding: 0 2%;
+    font-size: 20px;
 }
 
 /* Small menu. */
@@ -771,9 +775,10 @@ a:active {
 # Header
 --------------------------------------------------------------*/
 .site-branding {
-    background: #231F20;
+    background: #F5FE03;
+    display: inline;
     float: left;
-    postion: fixed;
+    /*postion: fixed;*/
 }
 
 .site-title {
@@ -782,6 +787,7 @@ a:active {
     text-transform: 4.5rem;
     line-height: normal;
     padding-bottom: 1rem;
+    display: inline;
 }
 
 .site-contact {

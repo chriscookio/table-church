@@ -10,21 +10,26 @@
  */
 
 get_header(); ?>
-
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
+            
             <div class="fp_div" id="splash">
                 <h1 class="aligncenter">AUTHENTIC. THOUGHTFUL. ENGAGED.</h1>
                 <span class="dashicons dashicons-twitter"></span>
                 <span class="dashicons dashicons-facebook-alt"></span>
                 <span class="dashicons dashicons-googleplus"></span>
             </div>
+            
+
             <div class="fp_div" id='about'>
                 <H1>WHO WE ARE</H1>
                 <div class="col-md-4"></div>
                 <p class="col-md-8"><?php echo $lorem_long; ?></p>
             </div>
+            
+            
+            
             <div class="fp_div" id="parishes">
                 <div class="col-md-6">
                     <a href="http://localhost/TableChurch/hstreet/"><h2 class="parish_text">H STREET</h2></a>
@@ -41,6 +46,8 @@ get_header(); ?>
                     <a href="http://localhost/TableChurch/hstreet/"><h3 class="parish_text">READ MORE</h3></a>
                 </div>
             </div>
+            
+            
             <div class="fp_div" id="engaging">
                 <div class="col-md-6" class="engaging_block">
                     <div class="shaded_box">
@@ -71,6 +78,8 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+            
+            
             <div class="fp_div" id="teaching">
                 <h1>TEACHING</h1>
                 <div class="container">
@@ -84,17 +93,36 @@ get_header(); ?>
                     $postslist = get_posts(/*'numberposts=4&order=DESC&orderby=date'*/ $args );
                     foreach ($postslist as $post) :
                         setup_postdata($post); ?>   
-                    <div class="col-md-3" style="background-image: url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id() ) [0]; ?>');" class="sermonthumb">
-                        <h2> <?php echo the_date(); ?> </h2>
-                    </div>
+                        <div class="col-md-3" style="sermon_thumb" >
+                            <?php 
+
+                            $attrs = array(
+                                    'class' => 'sermon_thumb',
+    //                                'alt'   => trim( strip_tags( $wp_postmeta->_wp_attachment_image_alt ) ),
+    //                                'title' => trim( strip_tags( $attachment->post_title ) )
+                            ); ?>
+                            <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(array(200,200), $attrs ); ?></a>
+                            <p class="sermon_date"> <?php the_time( get_option( 'date_format' ) ); ?> </p>
+                        </div>
                     <?php endforeach;?>
                 </div>
             </div>
+            
+            
             <div class="fp_div" id="giving">
                 <H1>WANT TO GIVE?</H1>
+                <div class="col-md-4"></div>
+                <p class="col-md-8"><?php echo $lorem_long; ?></p>
+                <p>GIVE ONLINE</p>
+                <p>MANAGE GIVING</p>
             </div>
+            
+            
             <div class="fp_div" id="kids">
                 <H1>KIDS & STUDENTS</h1>
+                <div class="col-md-4"></div>
+                <p class="col-md-8"><?php echo $lorem_long; ?></p>
             </div>
 
                 <?php while ( have_posts() ) : the_post(); ?>

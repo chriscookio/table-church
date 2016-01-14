@@ -27,20 +27,20 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="wp-content/themes/table-theme/img/logo.jpg"></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="wp-content/themes/table-theme/img/logo.jpg"></a></p>
 			<?php endif;
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>                                                                
 			<?php endif; ?>
-		</div><!-- .site-branding -->
-
+<!--this is where site branding used to be--> 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'table-theme' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</div><!-- .site-branding -->
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
