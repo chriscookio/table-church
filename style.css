@@ -20,6 +20,11 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
+/* WP needs style.css to pick up info in the above comment (specific format)
+actual style: style.php included as stylesheet via theme.php line 223
+*/  
+
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -50,8 +55,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 html {
         font-family: "bebasneue", sans-serif;
         font-size: 1.25em;
-/*	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;*/
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
 }
 
 body {
@@ -420,25 +425,40 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-.sermonthumb
+.sermon_thumb
 {
-/*    height: 300px;
-    width: 300px;*/
-    background-size: 300px;
-    /*padding: 10px;*/
-    text-align: center;
+    postion: relative;
 }
 
-.sermonthumbtxt
+.sermon_date
 {
-    z-index:100;
-    left: 0;
+    <!--left: 0;-->
     position:absolute;    
     color:white;
     font-size:60px;
     font-weight:bold;
-    left:50%;
-    top:50%;
+    <!--left:50%;-->
+    <!--top:50%;-->
+}
+
+.parish_text
+{
+    text-align: center;
+    padding: 0 10%
+}
+
+.engaging_block
+{
+    height: 50%;
+    text-align: center;
+}
+
+.shaded_box
+{
+    background-color: black;
+    opacity: 0.25;
+    /*margin: 0 0px 0 200px;*/
+    display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -548,9 +568,8 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+        /*position: fixed;*/
+	/*width: 100%;*/
         background-color: #F5FE03;
 }
 
@@ -619,6 +638,11 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
+}
+
+.menu-item{
+    padding: 0 2%;
+    font-size: 20px;
 }
 
 /* Small menu. */
@@ -750,23 +774,30 @@ a:active {
 # Header
 --------------------------------------------------------------*/
 .site-branding {
-    background: #231F20;
-/*    padding: ;
-    text-align: ;*/
-    
+    background: #F5FE03;
+    display: inline;
+    float: left;
+    postion: fixed;
+}
+
 .site-title {
-    font-weight: 700;
+    font-weight: 700;       /* bold */
     font-size: 40px;
     text-transform: 4.5rem;
     line-height: normal;
     padding-bottom: 1rem;
+    display: inline;
 }
 
-.site-description {
+.site-contact {
     font-weight: 100;
     font-size: 20px;
+    text-align: right;
+    color: black;
+    text-transform: uppercase;
+    float: left;       
 }
-}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -811,25 +842,33 @@ a:active {
 .page-content {
     min-height: 1000px;
 }
-.s1 {
-    background: blue;
+
+.fp_div {
+    display: inline-block;
+    width: 100%;
 }
-.s2 {
-    background: red;
+#splash {
+    background: lightblue;
 }
-.s3 {
-    background: green;
+#banner {
+    background: lightgreen;
 }
-.s4 {
-    background: orange;
+#about {
+    background: pink;
 }
-.s5 {
-    background: brown;
+#parishes {
+    background: lightgreen;
 }
-.s6 {
-    background: purple;
+#engaging {
+    background: #44bb44;
 }
-.s7 {
+#teaching {
+    background: #bb4444;
+}
+#giving {
+    background: #4444bb;
+}
+#kids {
     background: yellow;
 }
 

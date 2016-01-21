@@ -7,6 +7,23 @@
  * @package Table_Theme
  */
 
+//Placeholder text!
+
+$lorem = "Hello, little man. I will destroy you! You are the last hope of the universe. It's a T. It goes 'tuh'. Then we'll go with that data file! We're also Santa Claus!";
+
+$lorem_long = "WINDMILLS DO NOT WORK THAT WAY! GOOD NIGHT! Hey, what kinda party is this? There's no booze and only one hooker. Stop! Don't shoot fire stick in space canoe! Cause explosive decompression! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!
+Moving along… No! Don't jump! We're also Santa Claus! I'm just glad my fat, ugly mama isn't alive to see this day. Soothe us with sweet lies.
+Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough to feel ways about stuff! It's okay, Bender. I like cooking too. Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages!";
+
+$lorem_short = "Can I use the gun? Bender, hurry! This fuel's expensive!";
+
+
+$sections = [
+    'splash',
+    ];
+
+//Theme setup
+
 if ( ! function_exists( 'table_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -40,7 +57,7 @@ function table_theme_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails', array( 'post', 'sermon' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -79,35 +96,87 @@ function table_theme_setup() {
 endif; // table_theme_setup
 add_action( 'after_setup_theme', 'table_theme_setup' );
 
-
-add_action( 'init', 'create_post_type' );
+/*
+ * 
+ * Creates custom post types: Page Sections, Sermons and Events.
+ * Defines upload/creation options and labels. * 
+ * 
+ */
 function create_post_type() {
-  register_post_type( 'sermon',
-    array(
-      'labels' => array(
-        'name' => __( 'Sermons' ),
-        'singular_name' => __( 'Sermon' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'rewrite' => array('slug' => 'sermons'),
-    )
+    
+    $section_labels = array(
+    'name'          => __( 'Page Sections' ),
+    'singular_name' => __( 'Page Section' ),
+    'add_new_item'  => __( 'Add new Page Section' )
   );
-    register_post_type( 'event',
-    array(
-      'labels' => array(
-        'name' => __( 'Events' ),
-        'singular_name' => __( 'Event' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'rewrite' => array('slug' => 'events'),
-    )
+    
+  $section_args = array(
+    'labels'        => $section_labels,
+    'public'        => true,
+    'has_archive'   => false,
+    'rewrite'       => array('slug' => 'sections'),
+    'menu_position' => 9,
+    'menu_icon'     => 'dashicons-editor-alignleft',
+    'supports'      => [ 'title', 'editor']
   );
+  
+  register_post_type( 'section', $section_args );
+    
+    $sermon_labels = array(
+    'name'          => __( 'Sermons' ),
+    'singular_name' => __( 'Sermon' ),
+    'add_new_item'  => __( 'Upload New Sermon' )
+  );
+    
+  $sermon_args = array(
+    'labels'        => $sermon_labels,
+    'public'        => true,
+    'has_archive'   => true,
+    'rewrite'       => array('slug' => 'sermons'),
+    'menu_position' => 5,
+    'menu_icon'     => 'dashicons-megaphone',
+    'supports'      => [ 'title', 'editor', 'thumbnail', ]
+  );
+
+  register_post_type( 'sermon', $sermon_args );
+    
+  set_post_format( 'sermon' , 'audio' );
+
+  
+  $event_labels = array(
+    'name'          => __( 'Events' ),
+    'singular_name' => __( 'Event' ),
+    'add_new_item'  => __( 'Add New Event' )
+  );
+  
+  $event_args = array(
+    'labels'        => $event_labels,
+    'public'        => true,
+    'has_archive'   => true,
+    'rewrite'       => array('slug' => 'events'),
+    'menu_position' => 5,
+    'menu_icon'     => 'dashicons-location-alt',
+    'supports'      => [ 'title', 'editor', 'thumbnail', ]
+  );
+  
+    register_post_type( 'event', $event_args );
 }
-// do i need these??????????????????
-//register_taxonomy( 'sermons', $object_type, $args );
+add_action( 'init', 'create_post_type' );
+
+// do we need to register taxonomies?
+//register_taxonomy( 'sermon', $object_type, $args );
+//register_taxonomy_for_object_type( 'sermon', 'sermon' );
 //register_taxonomy( 'events', $object_type, $args );
+
+// Hiding "posts" functionality since we're using custom post types only.
+
+function remove_menus(){
+  
+  remove_menu_page( 'edit.php' );                   //Posts  
+  remove_menu_page( 'edit-comments.php' );          //Comments
+
+}
+add_action( 'admin_menu', 'remove_menus' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
