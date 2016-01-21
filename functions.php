@@ -7,6 +7,8 @@
  * @package Table_Theme
  */
 
+//Placeholder text!
+
 $lorem = "Hello, little man. I will destroy you! You are the last hope of the universe. It's a T. It goes 'tuh'. Then we'll go with that data file! We're also Santa Claus!";
 
 $lorem_long = "WINDMILLS DO NOT WORK THAT WAY! GOOD NIGHT! Hey, what kinda party is this? There's no booze and only one hooker. Stop! Don't shoot fire stick in space canoe! Cause explosive decompression! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood!
@@ -15,6 +17,12 @@ Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough to feel way
 
 $lorem_short = "Can I use the gun? Bender, hurry! This fuel's expensive!";
 
+
+$sections = [
+    'splash',
+    ];
+
+//Theme setup
 
 if ( ! function_exists( 'table_theme_setup' ) ) :
 /**
@@ -90,13 +98,31 @@ add_action( 'after_setup_theme', 'table_theme_setup' );
 
 /*
  * 
- * Creates both custom post types: Sermons and Events.
+ * Creates custom post types: Page Sections, Sermons and Events.
  * Defines upload/creation options and labels. * 
  * 
  */
 function create_post_type() {
     
-  $sermon_labels = array(
+    $section_labels = array(
+    'name'          => __( 'Page Sections' ),
+    'singular_name' => __( 'Page Section' ),
+    'add_new_item'  => __( 'Add new Page Section' )
+  );
+    
+  $section_args = array(
+    'labels'        => $section_labels,
+    'public'        => true,
+    'has_archive'   => false,
+    'rewrite'       => array('slug' => 'sections'),
+    'menu_position' => 9,
+    'menu_icon'     => 'dashicons-editor-alignleft',
+    'supports'      => [ 'title', 'editor']
+  );
+  
+  register_post_type( 'section', $section_args );
+    
+    $sermon_labels = array(
     'name'          => __( 'Sermons' ),
     'singular_name' => __( 'Sermon' ),
     'add_new_item'  => __( 'Upload New Sermon' )
@@ -108,7 +134,7 @@ function create_post_type() {
     'has_archive'   => true,
     'rewrite'       => array('slug' => 'sermons'),
     'menu_position' => 5,
-    'menu_icon'     => 'dashicons-format-audio',
+    'menu_icon'     => 'dashicons-megaphone',
     'supports'      => [ 'title', 'editor', 'thumbnail', ]
   );
 
@@ -116,6 +142,7 @@ function create_post_type() {
     
   set_post_format( 'sermon' , 'audio' );
 
+  
   $event_labels = array(
     'name'          => __( 'Events' ),
     'singular_name' => __( 'Event' ),
@@ -140,6 +167,16 @@ add_action( 'init', 'create_post_type' );
 //register_taxonomy( 'sermon', $object_type, $args );
 //register_taxonomy_for_object_type( 'sermon', 'sermon' );
 //register_taxonomy( 'events', $object_type, $args );
+
+// Hiding "posts" functionality since we're using custom post types only.
+
+function remove_menus(){
+  
+  remove_menu_page( 'edit.php' );                   //Posts  
+  remove_menu_page( 'edit-comments.php' );          //Comments
+
+}
+add_action( 'admin_menu', 'remove_menus' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

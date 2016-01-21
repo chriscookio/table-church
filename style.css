@@ -568,7 +568,6 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	/*display: block;*/
         /*position: fixed;*/
 	/*width: 100%;*/
         background-color: #F5FE03;
@@ -778,7 +777,7 @@ a:active {
     background: #F5FE03;
     display: inline;
     float: left;
-    /*postion: fixed;*/
+    postion: fixed;
 }
 
 .site-title {

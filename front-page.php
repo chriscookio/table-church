@@ -13,6 +13,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
+            <?php // include('front-page-splash.php'); ?>
             
             <div class="fp_div" id="splash">
                 <h1 class="aligncenter">AUTHENTIC. THOUGHTFUL. ENGAGED.</h1>
