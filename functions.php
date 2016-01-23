@@ -63,6 +63,7 @@ function table_theme_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'table-theme' ),
 	) );        
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -250,3 +251,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Register Custom Navigation Walker for Bootstrap 3
+ */
+require_once('wp_bootstrap_navwalker.php');
+
