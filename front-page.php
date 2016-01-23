@@ -10,80 +10,99 @@
  */
 
 get_header(); ?>
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-            <?php // include('front-page-splash.php'); ?>
-            
-            <div class="fp_div" id="splash">
+        <div class="fp_section" id="splash">
+            <div class="container text-center">
                 <h1 class="aligncenter">AUTHENTIC. THOUGHTFUL. ENGAGED.</h1>
                 <span class="dashicons dashicons-twitter"></span>
                 <span class="dashicons dashicons-facebook-alt"></span>
                 <span class="dashicons dashicons-googleplus"></span>
             </div>
-            
+        </div>
 
-            <div class="fp_div" id='about'>
+
+        <div class="fp_section" id='splash'>
+            <div class="container">
                 <H1>WHO WE ARE</H1>
-                <div class="col-md-4"></div>
-                <p class="col-md-8"><?php echo $lorem_long; ?></p>
-            </div>
-            
-            
-            
-            <div class="fp_div" id="parishes">
-                <div class="col-md-6">
-                    <a href="http://localhost/TableChurch/hstreet/"><h2 class="parish_text">H STREET</h2></a>
-                    <p class ="parish_text">
-                        <?php echo $lorem; ?>
-                    </p>
-                    <a href="http://localhost/TableChurch/hstreet/"><h3 class="parish_text">READ MORE</h3></a>
-                </div>
-                <div class="col-md-6">
-                    <a href="http://localhost/TableChurch/cohi/"><h2 class="parish_text">COLUMBIA HEIGHTS</h2></a>
-                    <p class ="parish_text">
-                        <?php echo $lorem; ?>
-                    </p>
-                    <a href="http://localhost/TableChurch/hstreet/"><h3 class="parish_text">READ MORE</h3></a>
-                </div>
-            </div>
-            
-            
-            <div class="fp_div" id="engaging">
-                <div class="col-md-6" class="engaging_block">
-                    <div class="shaded_box">
-                        <a href="localhost/TableChurch/SERVING"><h1>SERVING</h1></a>
-                        <p><?php echo $lorem_short; ?></p>
-                        <a href="localhost/TableChurch/serving"><h3 class="parish_text">READ MORE</h3></a>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">
+                        <div style="background-color: #F5FE03; height:10px;"></div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="shaded_box">
-                        <a href="localhost/TableChurch/GROWING"><h1>GROWING</h1></a>
-                        <p><?php echo $lorem_short; ?></p>
-                        <a href="localhost/TableChurch/GROWING"><h3 class="parish_text">READ MORE</h3></a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="shaded_box">
-                        <a href="localhost/TableChurch/COMMUNITY"><h1>COMMUNITY</h1></a>
-                        <p><?php echo $lorem_short; ?></p>
-                        <a href="localhost/TableChurch/community"><h3 class="parish_text">READ MORE</h3></a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="shaded_box">
-                        <a href="localhost/TableChurch/JUSTICE"><h1>JUSTICE</h1></a>
-                        <p><?php echo $lorem_short; ?></p>
-                        <a href="localhost/TableChurch/justice"><h3 class="parish_text">READ MORE</h3></a>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">
+                        <?php echo $lorem_long; ?>
                     </div>
                 </div>
             </div>
-            
-            
-            <div class="fp_div" id="teaching">
+        </div>
+
+        <div class="fp_section" id="parishes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="http://localhost/TableChurch/hstreet/"><h1 class="text-center">H STREET</h1></a>
+                        <p class ="text-center">
+                            <?php echo $lorem; ?>
+                        </p>
+                        <a href="http://localhost/TableChurch/hstreet/"><p class="text-center">READ MORE</p></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="http://localhost/TableChurch/cohi/"><h1 class="text-center">COLUMBIA HEIGHTS</h1></a>
+                        <p class ="text-center">
+                            <?php echo $lorem; ?>
+                        </p>
+                        <a href="http://localhost/TableChurch/hstreet/"><p class="text-center">READ MORE</p ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fp_section" id="engaging">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" class="engaging_block">
+                        <div class="shaded_box">
+                            <a href="localhost/TableChurch/SERVING"><h1 class="text-center">SERVING</h1></a>
+                            <p><?php echo $lorem_short; ?></p>
+                            <a href="localhost/TableChurch/serving"><h3 class="text-center">READ MORE</h3></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="shaded_box">
+                            <a href="localhost/TableChurch/GROWING"><h1 class="text-center">GROWING</h1></a>
+                            <p><?php echo $lorem_short; ?></p>
+                            <a href="localhost/TableChurch/GROWING"><h3 class="text-center">READ MORE</h3></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="shaded_box">
+                            <a href="localhost/TableChurch/COMMUNITY"><h1 class="text-center">COMMUNITY</h1></a>
+                            <p><?php echo $lorem_short; ?></p>
+                            <a href="localhost/TableChurch/community"><h3 class="text-center">READ MORE</h3></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="shaded_box">
+                            <a href="localhost/TableChurch/JUSTICE"><h1 class="text-center">JUSTICE</h1></a>
+                            <p><?php echo $lorem_short; ?></p>
+                            <a href="localhost/TableChurch/justice"><h3 class="text-center">READ MORE</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fp_section" id="teaching">
+            <div class="container">
                 <h1>TEACHING</h1>
-                <div class="container">
+                <div class="row">
                     <?php 
                     $args = [
                         'posts_per_page'   => '4',
@@ -91,16 +110,13 @@ get_header(); ?>
                         'orderby'          => 'date',
                         'order'            => 'DESC',
                     ];
-                    $postslist = get_posts(/*'numberposts=4&order=DESC&orderby=date'*/ $args );
+                    $postslist = get_posts($args);
                     foreach ($postslist as $post) :
                         setup_postdata($post); ?>   
                         <div class="col-md-3" style="sermon_thumb" >
-                            <?php 
-
+                            <?php
                             $attrs = array(
                                     'class' => 'sermon_thumb',
-    //                                'alt'   => trim( strip_tags( $wp_postmeta->_wp_attachment_image_alt ) ),
-    //                                'title' => trim( strip_tags( $attachment->post_title ) )
                             ); ?>
                             <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail(array(200,200), $attrs ); ?></a>
@@ -109,31 +125,40 @@ get_header(); ?>
                     <?php endforeach;?>
                 </div>
             </div>
-            
-            
-            <div class="fp_div" id="giving">
+        </div>
+
+        <div class="fp_section" id="giving">
+            <div class="container">
                 <H1>WANT TO GIVE?</H1>
-                <div class="col-md-4"></div>
-                <p class="col-md-8"><?php echo $lorem_long; ?></p>
-                <p>GIVE ONLINE</p>
-                <p>MANAGE GIVING</p>
+                <div class="row">
+                    <div class="col-md-8  col-md-offset-4"><?php echo $lorem_long; ?></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">GIVE ONLINE</div>
+                </div>
+                    <div style="background-color: #F5FE03; height:10px;"></div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-4">MANAGE GIVING</div>
+                </div>
+                    <div style="background-color: #F5FE03; height:10px;"></div>
             </div>
-            
-            
-            <div class="fp_div" id="kids">
-                <H1>KIDS & STUDENTS</h1>
-                <div class="col-md-4"></div>
-                <p class="col-md-8"><?php echo $lorem_long; ?></p>
-            </div>
+        </div>
 
-                <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php // get_template_part( 'template-parts/content', 'page' ); ?>
+        <div class="fp_section" id="kids">
+            <H1>KIDS & STUDENTS</h1>
+            <div class="col-md-4"></div>
+            <p class="col-md-8"><?php echo $lorem_long; ?></p>
+        </div>
 
-                <?php endwhile; // End of the loop. ?>
+            <?php while ( have_posts() ) : the_post(); ?>
 
-        </main><!-- #main -->
-    </div><!-- #primary -->
+                <?php // get_template_part( 'template-parts/content', 'page' ); ?>
+
+            <?php endwhile; // End of the loop. ?>
+
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
