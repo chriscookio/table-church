@@ -13,8 +13,18 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
         
-        <?php   include("main-include.php");    ?>
-
+<?php
+$url = site_url();
+if (strpos($url, 'hstreet') !== false) {
+    echo '<br><br><br>' . 'hstreet!';
+    } else { 
+        if (strpos($url, 'cohi') !== false) {
+            echo '<br><br><br>' . 'cohi!';
+        } else {
+            require_once 'include-main.php';
+        }
+    }
+?>
         <?php while ( have_posts() ) : the_post(); ?>
 
             <?php // get_template_part( 'template-parts/content', 'page' ); ?>
