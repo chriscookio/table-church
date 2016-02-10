@@ -1,9 +1,9 @@
 <!--        SPLASH      -->
 
 
-<div class="fp_section" id="splash">
+<div class="section" id="splash">
     <div class="container text-center">
-        <h1 class="aligncenter">AUTHENTIC. THOUGHTFUL. ENGAGED.</h1>
+        <h1 class="aligncenter">Authentic. Thoughtful. Engaged.</h1>
         <span class="dashicons dashicons-twitter"></span>
         <span class="dashicons dashicons-facebook-alt"></span>
         <span class="dashicons dashicons-googleplus"></span>
@@ -14,7 +14,7 @@
 <!--        ABOUT      -->
 
 
-<div class="fp_section" id='about'>
+<div class="section" id='about'>
     <div class="container">
         <H1>WHO WE ARE</H1>
         <div class="row">
@@ -34,7 +34,7 @@
 <!--        PARISHES      -->
 
 
-<div class="fp_section" id="parishes">
+<div class="section" id="parishes">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -59,7 +59,7 @@
 <!--        ENGAGING      -->
 
 
-<div class="fp_section" id="engaging">
+<div class="section" id="engaging">
     <div class="container">
         <div class="row">
             <div class="col-md-6" class="engaging_block">
@@ -100,7 +100,7 @@
 <!--        TEACHING      -->
 
 
-<div class="fp_section" id="teaching">
+<div class="section" id="teaching">
     <div class="container">
         <h1>TEACHING</h1>
         <div class="row">
@@ -132,7 +132,7 @@
 <!--        GIVING      -->
 
 
-<div class="fp_section" id="giving">
+<div class="section" id="giving">
     <div class="container">
         <H1>WANT TO GIVE?</H1>
         <div class="row">
@@ -153,7 +153,7 @@
 <!--        KIDS      -->
 
 
-<div class="fp_section" id="kids">
+<div class="section" id="kids">
 
     <div class="container">
         <H1>KIDS & STUDENTS</h1>

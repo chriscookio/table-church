@@ -571,13 +571,18 @@ a:active {
   padding: 0px;
 }
 
-/*
-.main-navigation {
-	clear: both;
-  background-color: #F5FE03;
+.site-content {
+    top: 460px;
 }
-*/
 
+.admin-bar .navbar {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .navbar {
+    top: 32px;
+  }
+}
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
