@@ -105,6 +105,10 @@ add_action( 'after_setup_theme', 'table_theme_setup' );
  */
 function create_post_type() {
     
+    
+//    SECTIONS
+    
+    
     $section_labels = array(
     'name'          => __( 'Page Sections' ),
     'singular_name' => __( 'Page Section' ),
@@ -123,6 +127,10 @@ function create_post_type() {
   
   register_post_type( 'section', $section_args );
     
+  
+//  SERMONS 
+  
+  
     $sermon_labels = array(
     'name'          => __( 'Sermons' ),
     'singular_name' => __( 'Sermon' ),
@@ -144,6 +152,9 @@ function create_post_type() {
   set_post_format( 'sermon' , 'audio' );
 
   
+//  EVENTS
+  
+  
   $event_labels = array(
     'name'          => __( 'Events' ),
     'singular_name' => __( 'Event' ),
@@ -161,6 +172,29 @@ function create_post_type() {
   );
   
     register_post_type( 'event', $event_args );
+    
+    
+//    LEADERS
+    
+    
+    $leader_labels = array(
+    'name'          => __( 'Leaders' ),
+    'singular_name' => __( 'Leader' ),
+    'add_new_item'  => __( 'Add New Leader' )
+    );
+    
+    $leader_args = array(
+    'labels'        => $leader_labels,
+    'public'        => true,
+    'has_archive'   => false,
+    'rewrite'       => array('slug' => 'leaders'),
+    'menu_position' => 5,
+    'menu_icon'     => 'dashicons-flag',
+    'supports'      => [ 'title', 'editor', 'thumbnail', ]
+  );
+
+  register_post_type( 'leader', $leader_args );
+      
 }
 add_action( 'init', 'create_post_type' );
 
