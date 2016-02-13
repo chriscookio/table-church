@@ -461,6 +461,12 @@ table {
     display: inline-block;
 }
 
+.directions_map {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -789,6 +795,26 @@ a:active {
     background: yellow;
 }
 
+#hst_splash {
+    background: #4444bb;
+}
+
+#hst_directions {
+    background: lightgreen;
+}
+
+#hst_about {
+    background: #44bb44;
+}
+
+#hst_leadership {
+    background: lightblue;
+}
+
+.arrow {
+    max-height: 128px;
+    max-width: 128px;
+}
 
 .page-links {
 	clear: both;
