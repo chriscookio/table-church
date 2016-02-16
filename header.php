@@ -44,7 +44,7 @@
           </button>
           <a class="navbar-brand" href="<?php echo home_url(); ?>">
             <?php // bloginfo('name'); ?>
-            <img src="<?php bloginfo('template_url'); ?>/img/logo.jpg" alt="Logo" style="height: 60px; width: 100%">
+            <img src="<?php bloginfo('template_url'); ?>/img/logo-top.jpg" alt="Logo" style="height: 60px; width: 100%">
           </a>
         </div>
 

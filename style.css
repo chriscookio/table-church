@@ -467,6 +467,15 @@ table {
     padding: 5%;
 }
 
+#splash {
+    margin-top: 46px;
+}
+
+#loc_splash {
+    margin-top: 46px;
+}
+
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -575,10 +584,6 @@ a:active {
 
 .navbar-brand {
   padding: 0px;
-}
-
-.site-content {
-    top: 460px;
 }
 
 .admin-bar .navbar {
@@ -795,25 +800,26 @@ a:active {
     background: yellow;
 }
 
-#hst_splash {
+#loc_splash {
     background: #4444bb;
 }
 
-#hst_directions {
+#loc_directions {
     background: lightgreen;
 }
 
-#hst_about {
+#loc_about {
     background: #44bb44;
 }
 
-#hst_leadership {
+#loc_leadership {
     background: lightblue;
 }
 
 .arrow {
     max-height: 128px;
     max-width: 128px;
+    vertical-align: auto;
 }
 
 .page-links {

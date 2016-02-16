@@ -57,7 +57,7 @@ function table_theme_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails', array( 'post', 'sermon' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'sermon', 'leader' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -194,6 +194,9 @@ function create_post_type() {
   );
 
   register_post_type( 'leader', $leader_args );
+  
+  set_post_format( 'leader' , 'audio' );
+
       
 }
 add_action( 'init', 'create_post_type' );
@@ -247,7 +250,7 @@ add_action( 'widgets_init', 'table_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function table_theme_scripts() {
-        wp_enqueue_style( 'bootstrap_css',  get_template_directory_uri() . '/bootstrap.min.css');
+        wp_enqueue_style( 'bootstrap_css',  get_template_directory_uri() . '/bootstrap.css');
         
 	wp_enqueue_style( 'table-theme-style', get_stylesheet_uri() );
 
