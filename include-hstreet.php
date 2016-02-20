@@ -81,7 +81,7 @@
         </div>
 
         
-      <!-- Indicators not needed -->
+      <!-- Indicators not needed - commenting out, keeping for reference if designed in later -->
 
 <!--        <div class="container">
           <row>
@@ -111,14 +111,24 @@
                     setup_postdata($post);
                     ?>
                     <div class="item <?php leader_first(); ?>">
+                        <div style="float:left; margin: 10px;">
 
-                        <?php
-                        $attrs = array(); 
-                        the_post_thumbnail('thumbnail', $attrs );
-                        the_title();
-                        the_content();
-                        $i++;
-                        ?>
+                            <?php
+                            $attr = array();   // here to remember syntax in case attrs are needed
+                            the_post_thumbnail('thumbnail', $attr );
+                            ?>
+                            
+                        </div>
+                        
+                        <div style = "font-size:1.25em; font-weight: bold; margin: 10px;">
+                            <?php   the_title();    ?>
+                        </div>
+                        <div style = "margin: 10px;" >
+                            <?php   
+                            the_content();
+                            $i++;
+                            ?>
+                        </div>
 
                     </div>
 
