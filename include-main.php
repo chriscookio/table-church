@@ -38,18 +38,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <a href="http://localhost/TableChurch/hstreet/"><h1 class="text-center">H STREET</h1></a>
+                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><h1 class="text-center">H STREET</h1></a>
                 <p class ="text-center">
                     <?php echo $lorem; ?>
                 </p>
-                <a href="http://localhost/TableChurch/hstreet/"><p class="text-center">READ MORE</p></a>
+                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><p class="text-center">READ MORE</p></a>
             </div>
             <div class="col-md-6">
-                <a href="http://localhost/TableChurch/cohi/"><h1 class="text-center">COLUMBIA HEIGHTS</h1></a>
+                <a href="<?php echo site_url() . "/cohi/"; ?>"><h1 class="text-center">COLUMBIA HEIGHTS</h1></a>
                 <p class ="text-center">
                     <?php echo $lorem; ?>
                 </p>
-                <a href="http://localhost/TableChurch/hstreet/"><p class="text-center">READ MORE</p ></a>
+                <a href="<?php echo site_url() . "/cohi/"; ?>"><p class="text-center">READ MORE</p ></a>
             </div>
         </div>
     </div>
@@ -64,32 +64,32 @@
         <div class="row">
             <div class="col-md-6" class="engaging_block">
                 <div class="shaded_box">
-                    <a href="localhost/TableChurch/SERVING"><h1 class="text-center">SERVING</h1></a>
+                    <a href="<?php echo site_url() . "/serving/"; ?>"><h1 class="text-center">SERVING</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="localhost/TableChurch/serving"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/serving/"; ?>"><h3 class="text-center">READ MORE</h3></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="localhost/TableChurch/GROWING"><h1 class="text-center">GROWING</h1></a>
+                    <a href="<?php echo site_url() . "/growing/"; ?>"><h1 class="text-center">GROWING</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="localhost/TableChurch/GROWING"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/growing/"; ?>"><h3 class="text-center">READ MORE</h3></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="localhost/TableChurch/COMMUNITY"><h1 class="text-center">COMMUNITY</h1></a>
+                    <a href="<?php echo site_url() . "/community/"; ?>"><h1 class="text-center">COMMUNITY</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="localhost/TableChurch/community"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/community/"; ?>"><h3 class="text-center">READ MORE</h3></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="localhost/TableChurch/JUSTICE"><h1 class="text-center">JUSTICE</h1></a>
+                    <a href="<?php echo site_url() . "/justice/"; ?>"><h1 class="text-center">JUSTICE</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="localhost/TableChurch/justice"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/justice/"; ?>"><h3 class="text-center">READ MORE</h3></a>
                 </div>
             </div>
         </div>

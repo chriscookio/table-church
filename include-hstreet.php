@@ -157,4 +157,25 @@
             </div>
         </div>
     </div>
+    
+    
+<?php
+// Ensure the global $post variable is in scope
+global $post;
+ 
+// Retrieve the next 5 upcoming events
+$events = tribe_get_events( array(
+    'posts_per_page' => 1,
+    'start_date' => current_time( 'Y-m-d' ),
+) );
+ 
+foreach ( $events as $post ) {
+    setup_postdata( $post );
+    the_title();
+    echo tribe_get_start_date();
+    the_content();
+}
+?>
+
 </div>
+
