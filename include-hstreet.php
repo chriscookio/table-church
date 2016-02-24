@@ -153,29 +153,26 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-4">
-                <?php echo $lorem_long; ?>
+                <?php
+                // Ensure the global $post variable is in scope
+                global $post;
+                $events = tribe_get_events( array(
+                    'posts_per_page' => 1,
+                    'orderby'          => 'modifed',
+                    'order'            => 'DESC',
+                ) );
+
+                foreach ( $events as $post ) {
+                    setup_postdata( $post );
+                ?>
+                    <h2><?php the_title(); ?></h2>
+                    <h3><?php echo tribe_get_start_date(); ?> </h3>
+                    <p><?php the_excerpt(); ?></p>
+                    <a href="<?php the_permalink(); ?>">Learn More>></a><br>
+                    <a href="<?php echo site_url() . "/events"; ?>">View Calendar>></a>
+                <?php } ?>
             </div>
         </div>
     </div>
-    
-    
-<?php
-// Ensure the global $post variable is in scope
-global $post;
- 
-// Retrieve the next 5 upcoming events
-$events = tribe_get_events( array(
-    'posts_per_page' => 1,
-    'start_date' => current_time( 'Y-m-d' ),
-) );
- 
-foreach ( $events as $post ) {
-    setup_postdata( $post );
-    the_title();
-    echo tribe_get_start_date();
-    the_content();
-}
-?>
-
 </div>
 

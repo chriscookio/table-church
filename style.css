@@ -468,11 +468,11 @@ table {
 }
 
 #splash {
-    margin-top: 46px;
+    margin-top: 90px;
 }
 
 #loc_splash {
-    margin-top: 46px;
+    margin-top: 90px;
 }
 
 /*--------------------------------------------------------------
@@ -586,7 +586,7 @@ a:active {
 }
 
 .admin-bar .navbar {
-  top: 46px;
+  /*top: 46px;*/
 }
 @media screen and (min-width: 783px) {
   .admin-bar .navbar {
@@ -609,6 +609,21 @@ a:active {
 	width: 50%;
 }
 
+.menu-item {
+    margin: 1em;
+}
+
+/*
+BootStrap overrides
+*/
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: transparent;
+}
+  
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

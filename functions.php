@@ -99,7 +99,7 @@ add_action( 'after_setup_theme', 'table_theme_setup' );
 
 /*
  * 
- * Creates custom post types: Page Sections, Sermons and Events.
+ * Creates custom post types: Page Sections, and Sermons.
  * Defines upload/creation options and labels. * 
  * 
  */
@@ -150,30 +150,8 @@ function create_post_type() {
   register_post_type( 'sermon', $sermon_args );
     
   set_post_format( 'sermon' , 'audio' );
-
   
-//  EVENTS - commented out to eliminate overlap with plugin. Will delete once it's up and running.
   
-//  
-//  $event_labels = array(
-//    'name'          => __( 'Events' ),
-//    'singular_name' => __( 'Event' ),
-//    'add_new_item'  => __( 'Add New Event' )
-//  );
-//  
-//  $event_args = array(
-//    'labels'        => $event_labels,
-//    'public'        => true,
-//    'has_archive'   => true,
-//    'rewrite'       => array('slug' => 'events'),
-//    'menu_position' => 5,
-//    'menu_icon'     => 'dashicons-location-alt',
-//    'supports'      => [ 'title', 'editor', 'thumbnail', ]
-//  );
-//  
-//    register_post_type( 'event', $event_args );
-    
-    
 //    LEADERS
     
     
