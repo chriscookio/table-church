@@ -64,32 +64,32 @@
         <div class="row">
             <div class="col-md-6" class="engaging_block">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/serving/"; ?>"><h1 class="text-center">SERVING</h1></a>
+                    <a href="<?php echo site_url() . "/serving/"; ?>"><h1 class="text-center">Serving</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="<?php echo site_url() . "/serving/"; ?>"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/serving/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/growing/"; ?>"><h1 class="text-center">GROWING</h1></a>
+                    <a href="<?php echo site_url() . "/growing/"; ?>"><h1 class="text-center">Growing</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="<?php echo site_url() . "/growing/"; ?>"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/growing/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/community/"; ?>"><h1 class="text-center">COMMUNITY</h1></a>
+                    <a href="<?php echo site_url() . "/community/"; ?>"><h1 class="text-center">Community</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="<?php echo site_url() . "/community/"; ?>"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/community/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/justice/"; ?>"><h1 class="text-center">JUSTICE</h1></a>
+                    <a href="<?php echo site_url() . "/events/"; ?>"><h1 class="text-center">Events</h1></a>
                     <p><?php echo $lorem_short; ?></p>
-                    <a href="<?php echo site_url() . "/justice/"; ?>"><h3 class="text-center">READ MORE</h3></a>
+                    <a href="<?php echo site_url() . "/events/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>
             </div>
         </div>

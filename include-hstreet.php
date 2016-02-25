@@ -25,7 +25,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <img src="wp-content/themes/table-theme/img/logo.jpg" class="directions_map">
+                <?php echo do_shortcode('[put_wpgm id=1]'); ?>
             </div>
 
             <div class="col-md-4">

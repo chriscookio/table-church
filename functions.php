@@ -99,33 +99,33 @@ add_action( 'after_setup_theme', 'table_theme_setup' );
 
 /*
  * 
- * Creates custom post types: Page Sections, and Sermons.
+ * Creates custom post types: Sermons and Leaders.
  * Defines upload/creation options and labels. * 
  * 
  */
 function create_post_type() {
     
     
-//    SECTIONS
+//    SECTIONS - commented out for now / Phase 2.
     
     
-    $section_labels = array(
-    'name'          => __( 'Page Sections' ),
-    'singular_name' => __( 'Page Section' ),
-    'add_new_item'  => __( 'Add new Page Section' )
-  );
-    
-  $section_args = array(
-    'labels'        => $section_labels,
-    'public'        => true,
-    'has_archive'   => false,
-    'rewrite'       => array('slug' => 'sections'),
-    'menu_position' => 9,
-    'menu_icon'     => 'dashicons-editor-alignleft',
-    'supports'      => [ 'title', 'editor']
-  );
-  
-  register_post_type( 'section', $section_args );
+//    $section_labels = array(
+//    'name'          => __( 'Page Sections' ),
+//    'singular_name' => __( 'Page Section' ),
+//    'add_new_item'  => __( 'Add new Page Section' )
+//  );
+//    
+//  $section_args = array(
+//    'labels'        => $section_labels,
+//    'public'        => true,
+//    'has_archive'   => false,
+//    'rewrite'       => array('slug' => 'sections'),
+//    'menu_position' => 9,
+//    'menu_icon'     => 'dashicons-editor-alignleft',
+//    'supports'      => [ 'title', 'editor']
+//  );
+//  
+//  register_post_type( 'section', $section_args );
     
   
 //  SERMONS 
