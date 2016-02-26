@@ -14,10 +14,22 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'table-theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'table-theme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'table-theme' ), 'table-theme', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+		<div class="site-info container">
+                    <row>
+                        <div class="col-md-4">
+                            <p>Sundays</p>
+                            <p>5 pm | 1020 H Street</p>
+                            <p>6 pm | 1459 Columbia Road, NW</p>
+                        </div>
+                        <div class="col-md-4">
+                            LOGO!
+                        </div>
+                        <div class="col-md-4">
+                            <p>Contact Us</p>
+                            <p>TEL: (555) 555-1234</p>
+                            <p>Email: info@thetablechurchdc.org</p>
+                        </div>
+                    </row>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
