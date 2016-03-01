@@ -5,6 +5,18 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Table_Theme
+ * 
+ *  TABLE OF CONTENTS
+ * 
+ * 1) Placeholder text   
+ * 2) Theme Setup
+ * 3) Custom Post Types
+ * 4) Remove Menus (?)
+ * 5) Setting content width (?)
+ * 6) Widgets
+ * 7) Scripts
+ * 8) Custom menus
+ * 
  */
 
 //Placeholder text!
@@ -100,7 +112,7 @@ add_action( 'after_setup_theme', 'table_theme_setup' );
 /*
  * 
  * Creates custom post types: Sermons and Leaders.
- * Defines upload/creation options and labels. * 
+ * Defines upload/creation options and labels. 
  * 
  */
 function create_post_type() {
@@ -179,7 +191,7 @@ function create_post_type() {
 }
 add_action( 'init', 'create_post_type' );
 
-// do we need to register taxonomies?
+// TBD: do we need to register taxonomies?
 //register_taxonomy( 'sermon', $object_type, $args );
 //register_taxonomy_for_object_type( 'sermon', 'sermon' );
 //register_taxonomy( 'events', $object_type, $args );

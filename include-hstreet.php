@@ -2,7 +2,7 @@
 <!--        SPLASH      -->
 
 
-<div class="section" id="loc_splash">
+<div class="section" id="parish_splash">
     <div class="container text-center">
         <h1 class="aligncenter">Joining God in the renewal of H Street</h1>
         <span class="dashicons dashicons-twitter"></span>
@@ -15,7 +15,7 @@
 <!--        DIRECTIONS      -->
 
 
-<div class="section" id='loc_directions'>
+<div class="section" id='locationation_directions'>
     <div class="container">
         <H1>How to get here</H1>
         <div class="row">
@@ -39,7 +39,7 @@
 <!--        ABOUT      -->
 
 
-<div class="section" id='loc_about'>
+<div class="section" id='parish_about'>
     <div class="container">
         <H1>About this campus</H1>
         <div class="row">
@@ -58,7 +58,7 @@
 
 <!--        LEADERSHIP      -->
 
-<div class="section" id='loc_leadership'>
+<div class="section" id='parish_leadership'>
     <div id="leadershipCarousel" class="carousel slide" data-ride="carousel"> 
         <div class="container">
             <row>
@@ -143,7 +143,7 @@
 <!--        EVENTS      -->
 
 
-<div class="section" id='loc_events'>
+<div class="section" id='parish_events'>
     <div class="container">
         <H1>Events</H1>
         <div class="row">

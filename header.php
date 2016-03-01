@@ -29,7 +29,8 @@
       $description = get_bloginfo( 'description', 'display' );
       if ( $description || is_customize_preview() ) :
     ?>
-    <!-- Wat is this... <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
+    <!-- Wat is this... <p class="site-description">
+    <?php echo $description; /* WPCS: xss ok. */ ?></p> -->
     <?php endif; ?>
 
     <nav class="navbar navbar-default navbar-fixed-top main-navigation" role="navigation">
@@ -48,7 +49,8 @@
           </a>
         </div>
 
-        <?php 
+        <?php
+
           wp_nav_menu( array( 
               'theme_location'    => 'primary',
               'menu_id'           => 'primary-menu',
@@ -60,7 +62,7 @@
               'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
               'walker'            => new wp_bootstrap_navwalker()
             )
-          );
+          );            
         ?>
       </div>
     </nav>

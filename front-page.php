@@ -15,10 +15,10 @@ get_header(); ?>
         
 <?php
 $url = site_url();
-if (strpos($url, 'hstreet') !== false) {
+if (strpos($url, 'hstreet')) {
     require_once 'include-hstreet.php';
     } else { 
-        if (strpos($url, 'cohi') !== false) {
+        if (strpos($url, 'cohi')) {
             require_once 'include-cohi.php';
         } else {
             require_once 'include-main.php';

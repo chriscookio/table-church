@@ -471,7 +471,7 @@ table {
     margin-top: 90px;
 }
 
-#loc_splash {
+#parish_splash {
     margin-top: 90px;
 }
 
@@ -814,19 +814,19 @@ BootStrap overrides
     background: yellow;
 }
 
-#loc_splash {
+#parish_splash {
     background: #4444bb;
 }
 
-#loc_directions {
+#parish_directions {
     background: lightgreen;
 }
 
-#loc_about {
+#parish_about {
     background: #44bb44;
 }
 
-#loc_leadership {
+#parish_leadership {
     background: lightblue;
 }
 
