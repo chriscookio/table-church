@@ -10,25 +10,38 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    <header class="entry-header">
+            <?php 
+            the_title( '<h1 class="entry-title">', '</h1>' ); 
+            the_date("l, F j, Y",'<h2>','</h2>');
+            ?>
 
-		<div class="entry-meta">
-			<?php table_theme_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+            <!--<div class="entry-meta">-->
+                    <?php // table_theme_posted_on();  //// do not want ////  ?>
+            <!--</div> .entry-meta -->
+    </header><!-- .entry-header -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 content-thumbnail"> 
+                    <?php the_post_thumbnail(); ?> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-4 content-sermon">
+                        <?php the_content(); ?>
+                </div>
+            </div>
+        </div>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'table-theme' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+    <?php
+    wp_link_pages( array(
+            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'table-theme' ),
+            'after'  => '</div>',
+    ) );
+    ?>
 
-	<footer class="entry-footer">
-		<?php table_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+    </div><!-- .entry-content -->
+    <footer class="entry-footer">
+            <?php // table_theme_entry_footer(); //// just the "edit" link...no need //// ?>
+    </footer><!-- .entry-footer -->
 </article><!-- #post-## -->

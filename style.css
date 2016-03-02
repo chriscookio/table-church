@@ -119,8 +119,9 @@ dfn {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 4em;
 	margin: 0.67em 0;
+        font-weight: strong;
 }
 
 mark {
@@ -467,12 +468,12 @@ table {
     padding: 5%;
 }
 
-#splash {
+.site-content {
     margin-top: 90px;
 }
 
-#parish_splash {
-    margin-top: 90px;
+.entry-content {
+    float: none;
 }
 
 /*--------------------------------------------------------------
@@ -830,11 +831,37 @@ BootStrap overrides
     background: lightblue;
 }
 
+.mejs-audio {
+    width: 40%;
+}
+
+.site-footer {
+    background-color: #231F20;
+    text-align: center;
+    color: white;
+    padding: 30px 0;
+}
+.site-footer p {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.content-sermon {
+    padding-top: 1em;
+}
+
+.content-thumbnail {
+    padding-top: 1em;
+}
+
 .arrow {
     max-height: 128px;
     max-width: 128px;
     vertical-align: auto;
 }
+
+
 
 .page-links {
 	clear: both;
