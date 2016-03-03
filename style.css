@@ -52,12 +52,6 @@ actual style: style.php included as stylesheet via theme.php line 223
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-html {
-        font-family: "bebasneue", sans-serif;
-        font-size: 1.25em;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
-}
 
 body {
 	margin: 0;
@@ -119,9 +113,10 @@ dfn {
 }
 
 h1 {
-	font-size: 4em;
+	font-size: 4.5em;
+        font-weight: 900;
+        letter-spacing: .05em;
 	margin: 0.67em 0;
-        font-weight: strong;
 }
 
 mark {
@@ -174,7 +169,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: "bebasneue", monospace, monospace;
+	font-family: monospace, monospace;
 	font-size: 1em;
 }
 
@@ -274,19 +269,30 @@ th {
 # Typography
 --------------------------------------------------------------*/
 @font-face {
-    font-family: bebasneue;
+    font-family: BebasNeue;
     src: url('font/BebasNeue Regular.ttf');
 }
+
+@font-face {
+    font-family: BebasNeueBold;
+    src: url('font/BebasNeue Bold.ttf');
+}
+
+@font-face {
+    font-family: BebasNeueThin;
+    src: url('font/BebasNeue Thin.ttf');
+}
+
 body,
 button,
 input,
 select,
 textarea {
 	color: #404040;
-	font-family: "bebasneue", sans-serif;
+	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+	font-size: 2.5rem;
+	line-height: 1.6;
 }
 
 h1,
@@ -295,6 +301,7 @@ h3,
 h4,
 h5,
 h6 {
+    	font-family: "BebasNeueBold", sans-serif;
 	clear: both;
 }
 
@@ -319,7 +326,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "bebasneue", sans-serif;
+	font-family: "BebasNeue", sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -333,7 +340,7 @@ code,
 kbd,
 tt,
 var {
-	font-family: "bebasneue", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -836,11 +843,15 @@ BootStrap overrides
 }
 
 .site-footer {
+    font-family: "BebasNeueThin", sans-serif;
+    font-weight: lighter;
     background-color: #231F20;
     text-align: center;
     color: white;
     padding: 30px 0;
+    line-height: 1.25em;
 }
+
 .site-footer p {
     margin: 0;
     padding: 0;
@@ -866,6 +877,10 @@ BootStrap overrides
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.nav-links {
+    padding: 3em;
 }
 
 /*--------------------------------------------------------------
