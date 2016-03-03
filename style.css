@@ -113,7 +113,14 @@ dfn {
 }
 
 h1 {
-	font-size: 4.5em;
+	font-size: 4.25em;
+        font-weight: 900;
+        letter-spacing: .05em;
+	margin: 0.67em 0;
+}
+
+h2 {
+	font-size: 3em;
         font-weight: 900;
         letter-spacing: .05em;
 	margin: 0.67em 0;

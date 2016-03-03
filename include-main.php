@@ -2,7 +2,7 @@
 
 
 <div class="section" id="splash">
-    <div class="container text-center">
+    <div class="container-fluid text-center">
         <h1 class="aligncenter">Authentic. Thoughtful. Engaged.</h1>
         <span class="dashicons dashicons-twitter"></span>
         <span class="dashicons dashicons-facebook-alt"></span>
@@ -38,14 +38,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><h1 class="text-center">H STREET</h1></a>
+                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><h2 class="text-center">H STREET</h2></a>
                 <p class ="text-center">
                     <?php echo $lorem; ?>
                 </p>
                 <a href="<?php echo site_url() . "/hstreet/"; ?>" ><p class="text-center">READ MORE</p></a>
             </div>
             <div class="col-md-6">
-                <a href="<?php echo site_url() . "/cohi/"; ?>"><h1 class="text-center">COLUMBIA HEIGHTS</h1></a>
+                <a href="<?php echo site_url() . "/cohi/"; ?>"><h2 class="text-center">COLUMBIA HEIGHTS</h2></a>
                 <p class ="text-center">
                     <?php echo $lorem; ?>
                 </p>
@@ -64,14 +64,14 @@
         <div class="row">
             <div class="col-md-6" class="engaging_block">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/serving/"; ?>"><h1 class="text-center">Serving</h1></a>
+                    <a href="<?php echo site_url() . "/serving/"; ?>"><h2 class="text-center">Serving</h2></a>
                     <p><?php echo $lorem_short; ?></p>
                     <a href="<?php echo site_url() . "/serving/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/growing/"; ?>"><h1 class="text-center">Growing</h1></a>
+                    <a href="<?php echo site_url() . "/growing/"; ?>"><h2 class="text-center">Growing</h2></a>
                     <p><?php echo $lorem_short; ?></p>
                     <a href="<?php echo site_url() . "/growing/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>
@@ -80,14 +80,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/community/"; ?>"><h1 class="text-center">Community</h1></a>
+                    <a href="<?php echo site_url() . "/community/"; ?>"><h2 class="text-center">Community</h2></a>
                     <p><?php echo $lorem_short; ?></p>
                     <a href="<?php echo site_url() . "/community/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="shaded_box">
-                    <a href="<?php echo site_url() . "/events/"; ?>"><h1 class="text-center">Events</h1></a>
+                    <a href="<?php echo site_url() . "/events/"; ?>"><h2 class="text-center">Events</h2></a>
                     <p><?php echo $lorem_short; ?></p>
                     <a href="<?php echo site_url() . "/events/"; ?>"><h3 class="text-center">Read more</h3></a>
                 </div>

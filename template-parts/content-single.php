@@ -14,9 +14,9 @@
         <div class='row'>
             <header class="entry-header">
                 <?php 
-                the_title( '<h1 class="entry-title">', '</h1>' ); 
+                the_title( '<h1 class="entry-title" style="margin-bottom: 0;">', '</h1>' ); 
                 echo '</row><row>';
-                the_date("l, F j, Y",'<h2>','</h2>');
+                the_date("l, F j, Y",'<h3>','</h3>');
                 ?>
             </header><!-- .entry-header -->
         </div>
@@ -31,6 +31,9 @@
                         <?php the_content(); ?>
                 </div>
             </div>
+            <row>
+                <h3 style="margin-top: 3em;"><a href="<?php echo site_url() . '/blog/sermons/'; ?>">Listen to all sermons>></a></h3>
+            </row>
     <?php
     wp_link_pages( array(
             'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'table-theme' ),
