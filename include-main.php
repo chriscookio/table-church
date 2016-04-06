@@ -4,9 +4,9 @@
 <div class="section" id="splash">
     <div class="container-fluid text-center">
         <h1 class="aligncenter">Authentic. Thoughtful. Engaged.</h1>
-        <span class="dashicons dashicons-twitter"></span>
-        <span class="dashicons dashicons-facebook-alt"></span>
-        <span class="dashicons dashicons-googleplus"></span>
+        <span class="smicon-bkgd"><span class="dashicons dashicons-twitter smicon"></span></span>
+        <span class="dashicons dashicons-facebook-alt smicon"></span>
+        <span class="dashicons dashicons-googleplus smicon"></span>
     </div>
 </div>
 
@@ -38,18 +38,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><h2 class="text-center">H STREET</h2></a>
+                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><h2 class="text-center" a-unstyled>H STREET</h2></a>
                 <p class ="text-center">
                     <?php echo $lorem; ?>
                 </p>
-                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><p class="text-center">READ MORE</p></a>
+                <a href="<?php echo site_url() . "/hstreet/"; ?>" ><p class="text-center a-unstyled">READ MORE</p></a>
             </div>
             <div class="col-md-6">
-                <a href="<?php echo site_url() . "/cohi/"; ?>"><h2 class="text-center">COLUMBIA HEIGHTS</h2></a>
+                <a href="<?php echo site_url() . "/cohi/"; ?>"><h2 class="text-center" a-unstyled>COLUMBIA HEIGHTS</h2></a>
                 <p class ="text-center">
                     <?php echo $lorem; ?>
                 </p>
-                <a href="<?php echo site_url() . "/cohi/"; ?>"><p class="text-center">READ MORE</p ></a>
+                <a href="<?php echo site_url() . "/cohi/"; ?>"><p class="text-center a-unstyled">READ MORE</p ></a>
             </div>
         </div>
     </div>

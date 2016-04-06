@@ -65,7 +65,7 @@ function table_theme_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	 * Enable support for Post Thumbnails on posts and pages.   
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
@@ -284,3 +284,9 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require_once('wp_bootstrap_navwalker.php');
 
+/**
+ * Enqueue Dashicons style for frontend use when enqueuing your theme's style sheet
+ */
+function mytheme_scripts() {
+	wp_enqueue_style( 'mytheme-style', get_stylesheet_uri(), 'dashicons' );
+}
