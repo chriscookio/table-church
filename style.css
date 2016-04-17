@@ -236,18 +236,16 @@ img {
     padding: 0 10%
 }
 
-.engaging_block
-{
-    height: 50%;
-    text-align: center;
-}
-
-.shaded_box
+.block-engaging
 {
     background-color: black;
     opacity: 0.25;
-    /*margin: 0 0px 0 200px;*/
     display: inline-block;
+    margin: 20px;
+}
+
+.text-engaging {
+    margin: 0;
 }
 
 .directions_map {

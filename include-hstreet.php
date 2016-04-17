@@ -66,9 +66,9 @@
 
                 <!-- Left and right controls -->
 
-                    <a class="left carousel-control col-md-1" href="#leadershipCarousel" role="button" data-slide="prev">
+                <a class="left carousel-control col-md-1" href="#leadershipCarousel" role="button" data-slide="prev">
                     <img src="wp-content/themes/table-theme/img/arrow-left.gif" class='arrow' aria-hidden="false">
-                    </a>
+                </a>
                 <a class="right carousel-control col-md-1" href="#leadershipCarousel" role="button" data-slide="next">
                     <img src="wp-content/themes/table-theme/img/arrow-right.gif" class='arrow' aria-hidden="false">
                 </a>

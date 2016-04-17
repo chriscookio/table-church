@@ -19,7 +19,9 @@
  * 
  */
 
-//Placeholder text!
+//
+//   1)   sPlaceholder and static text
+//
 
 $lorem = "Hello, little man. I will destroy you! You are the last hope of the universe. It's a T. It goes 'tuh'. Then we'll go with that data file! We're also Santa Claus!";
 
@@ -29,10 +31,74 @@ Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough to feel way
 
 $lorem_short = "Can I use the gun? Bender, hurry! This fuel's expensive!";
 
+$beliefs =
+        "
+We are created as relational beings, made from love for love. The truest thing about us is that we are a beloved child of God.<br><br>
+Jesus reveals God to us. When we want to know what God looks like – we look at Jesus. In Jesus we discover a God who is merciful, kind, other seeking, and most profoundly love.<br><br>
+Jesus provides the story through which we make sense of our life and discover the dreams of God for humanity. In him we discover our purpose, significance and ultimate vision of the good life.<br><br>
+Through the resurrection, God’s beautiful world of love, joy, peace, kindness, goodness and justice breaks into our world of brokenness. On the cross, the powers of death, loneliness, greed, and self-interest have their final say and they have been defeated-- their time is coming to an end.<br><br>
+Becoming a follower of Jesus isn’t a contract we sign or believing all the right things, but instead it’s a leap faith that leads to obedience.<br><br>
+As followers of Jesus we are called into a new community, which puts God on display to the world. Our life together through the power of the Spirit leads to the renewal and healing of our lives, our neighborhood and our world.<br><br>
+In our life together, each of us are called to share our gifts in service to God and the world. We only fully discover our purpose in the world through community.<br><br>
+We are never afraid to face the Bible and difficult questions with a critical eye. We are not a people of the book, but instead a people of an event – Christ life, death and resurrection.<br><br>
+To follow the path of Jesus is countercultural. It’s a radical movement of limitless forgiveness, extreme hospitality, peacemaking, abundant generosity and sacrificial love.<br><br>
+God doesn’t cause suffering, but redeems it. And calls us to join in the work of renewing and reconciling and redeeming all things. <br><br>
+As a community of Jesus followers, we follow a Jesus who shared an open table with all who sought him. That’s why we welcome everyone to share their gifts.<br><br>
+The future is open and full of possibilities. We must embrace the awesome role we are invited to play in seeing God’s dreams fulfilled.";
 
 $sections = [
     'splash',
     ];
+
+
+$front_who = 
+        ' 
+        <H1>Who we are</H1>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <div style="background-color: #F5FE03; height:10px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <h3>LOVE THY NEIGHBORHOOD - Jesus</h3>
+                <p>The Table exists to call people to become authentic and thoughtful followers of Jesus and join God in the renewal of all things.</p>
+            </div>
+        </div>
+        ';
+
+$front_values =
+        '                        
+    <H2>Values</H2>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <div style="background-color: #F5FE03; height:10px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="col-md-8 col-md-offset-4">
+                <li>Simple:  To provide simple environments for people to experience God’s grace and pursue justice.</li>
+                <li>Hospitality: To exist for others, continually seeking to invite, share, welcome, and shape our community for those who have not yet become a part of it.</li>
+                <li>Intention Development: To challenge followers of Jesus to fulfill their purpose by intentionally developing leaders and equipping disciples.</li>
+                <li>Generosity: To freely give of the gifts God has entrusted us with. We believe that God calls us to be generous with our time, money and resources in service to God’s mission in the world.</li>
+                <li>Strategic Service: To thoughtfully engage in acts of justice and mercy in our community, working to seek good for all. We do this most effectively through partnerships.</li>
+            </ul>
+        </div>
+';
+
+$front_beliefs =
+        ' 
+        <H2>Beliefs</H2>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+                <div style="background-color: #F5FE03; height:10px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                ' . $beliefs . '  
+            </div>
+        ';
 
 //Theme setup
 
