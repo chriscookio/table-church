@@ -587,8 +587,8 @@ BootStrap overrides
 #banner {
     background: lightgreen;
 }
-#about {
-    background: pink;
+#aboutCarousel {
+    background: #ffffe0;
 }
 #parishes {
     background: lightgreen;

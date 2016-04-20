@@ -1,5 +1,6 @@
 <!--        SPLASH      -->
-
+        <?php    echo do_shortcode("[metaslider id=1853]"); ?>
+        
 
 <div class="section" id="splash">
     <div class="container-fluid text-center">
@@ -16,7 +17,7 @@
 
     <div id="aboutCarousel" class="carousel slide" data-ride="carousel"> 
         <div class="container">
-            <div class="row" style="background-color:black;">
+            <div class="row">
                 <!-- Left and right controls -->
 
                 <a class="left carousel-control col-md-offset-10 col-md-1" href="#aboutCarousel" role="button" data-slide="prev">

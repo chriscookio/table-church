@@ -56,11 +56,6 @@ $front_who =
         <H1>Who we are</H1>
         <div class="row">
             <div class="col-md-8 col-md-offset-4">
-                <div style="background-color: #F5FE03; height:10px;"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-4">
                 <h3>LOVE THY NEIGHBORHOOD - Jesus</h3>
                 <p>The Table exists to call people to become authentic and thoughtful followers of Jesus and join God in the renewal of all things.</p>
             </div>
@@ -70,11 +65,6 @@ $front_who =
 $front_values =
         '                        
     <H2>Values</H2>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-4">
-                <div style="background-color: #F5FE03; height:10px;"></div>
-            </div>
-        </div>
         <div class="row">
             <ul class="col-md-8 col-md-offset-4">
                 <li>Simple:  To provide simple environments for people to experience God’s grace and pursue justice.</li>
@@ -89,11 +79,6 @@ $front_values =
 $front_beliefs =
         ' 
         <H2>Beliefs</H2>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-4">
-                <div style="background-color: #F5FE03; height:10px;"></div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-9 col-md-offset-3">
                 ' . $beliefs . '  
