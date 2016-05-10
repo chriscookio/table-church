@@ -15,6 +15,7 @@ get_header(); ?>
 
 <?php
 $url = site_url();
+echo $url;
 if (strpos($url, 'hstreet')) {
     require_once 'include-hstreet.php';
     } else { 
@@ -24,6 +25,7 @@ if (strpos($url, 'hstreet')) {
             require_once 'include-main.php';
         }
     }
+    echo $url;
 ?>
         <?php while ( have_posts() ) : the_post(); ?>
 

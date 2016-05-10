@@ -1,9 +1,15 @@
 <!--        SPLASH      -->
-        <?php    echo do_shortcode("[metaslider id=1853]"); ?>
-        
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <?php echo do_shortcode("[metaslider id=1853]"); ?>
+        </div>
+    </div>
+</div>
 
 <div class="section" id="splash">
-    <div class="container-fluid text-center">
+    <div class="container text-center">
         <h1 class="aligncenter">Authentic. Thoughtful. Engaged.</h1>
         <span class="smicon-bkgd"><span class="dashicons dashicons-twitter smicon"></span></span>
         <span class="dashicons dashicons-facebook-alt smicon"></span>
